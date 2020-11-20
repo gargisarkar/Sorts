@@ -7,7 +7,7 @@ public class QuickSort {
         int low = 0 ;
         int high = arr.length - 1;
         quick(arr, low, high);
-       // Arrays.toString(arr);
+        System.out.println(Arrays.toString(arr));
     }
 
     public static void quick(int[] arr, int low, int high){
@@ -20,11 +20,11 @@ public class QuickSort {
     }
 
     public static int partition(int[] arr,int low , int high){
-        int j = low;
+        int j;
         int pivot = arr[high];
-        int i = -1;
-        for(j = low; j< high -1 ; j++){
-            if(arr[j] > pivot){
+        int i = (low - 1);
+        for(j = low; j<high ; j++){
+            if(arr[j] < pivot){
                 i++;
                 int temp = arr[j];
                 arr[j] = arr[i];
